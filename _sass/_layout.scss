@@ -1,0 +1,86 @@
+html, body, .container {
+  width: 100vw;
+  height: 100vh;
+  background: black;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  user-select: none;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.content {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.content img {
+  display: none;
+  max-height: 100%;
+
+  &.active {
+    display: block;
+  }
+}
+
+.up, .down, .left, .right {
+  background: #555;
+  cursor: pointer;
+}
+
+.up, .down {
+  display: none;
+  height: 48px;
+  width: 100%;
+  img {
+    display: block;
+    height: 36px;
+    margin: 6px auto;
+  }
+}
+
+.left, .right {
+  display: block;
+  width: 48px;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    display: block;
+    width: 36px;
+    margin: 0 6px;
+  }
+}
+
+@include sm() {
+  .container {
+    flex-direction: column;
+  }
+  .content {
+    height: calc(100% - 2 * 48px);
+  }
+  .up, .down {
+    display: block;
+  }
+  .left, .right {
+    display: none;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}

@@ -1,0 +1,31 @@
+---
+---
+@charset "utf-8";
+
+// variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+
+// $sm-breakpoint:       586px;
+// $sm-breakpoint:       676px;
+$sm-breakpoint:       768px;
+
+@mixin sm() {
+    @media screen and (max-width: $sm-breakpoint) {
+        @content;
+    }
+}
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "grid",
+        "layout"
+;

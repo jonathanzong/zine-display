@@ -1,0 +1,33 @@
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-32587283-1']);
+    _gaq.push(['_setDomainName', 'jonathanzong.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{page.title}}" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+  {% if page.img %}
+    <meta property="og:image" content="{{ page.img | prepend: site.baseurl | prepend: site.url }}" />
+  {% else %}
+    <meta property="og:image" content="http://jonathanzong.com/images/blog/placeholder.png" />
+  {% endif %}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@ohnobackspace" />
+</head>
