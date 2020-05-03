@@ -16,7 +16,7 @@
 
 # Build settings
 title: "jeff bezineo's amazine dream"
-baseurl: ""
+baseurl: "/zine-display"
 
 collections:
   zines:
