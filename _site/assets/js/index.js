@@ -1,9 +1,15 @@
 function prev() {
+  if ($('img.active').is(':first-child')) {
+    return;
+  }
   $('img.active').removeClass('active').prev().addClass('active');
   buttons();
 }
 
 function next() {
+  if ($('img.active').is(':last-child')) {
+    return;
+  }
   $('img.active').removeClass('active').next().addClass('active');
   buttons();
 }
