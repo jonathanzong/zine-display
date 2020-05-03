@@ -26,4 +26,16 @@ function buttons() {
 $(document).ready(() => {
   $('.container').on('click', '.left, .up', prev);
   $('.container').on('click', '.right, .down', next);
+  $(window).keydown(function(e) {
+    switch (e.keyCode || e.which) {
+      case 37: // left
+      case 38: // up
+        prev();
+        break;
+      case 39: // right
+      case 40: // down
+        next();
+        break;
+    }
+  });
 });
