@@ -22,6 +22,7 @@
 
   <meta property="og:type" content="article" />
   <meta property="og:title" content="{{page.title}}" />
+  <meta property="og:description" content="{{page.description}}" />
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
   {% if page.img %}
     <meta property="og:image" content="{{ page.img | prepend: site.baseurl | prepend: site.url }}" />
